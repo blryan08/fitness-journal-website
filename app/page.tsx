@@ -1,4 +1,10 @@
-export default function Home() {
-  return <h1>Welcome to YourFitJournal</h1>;
+import Image from "next/image";
+import favicon2 from "../public/favicon2.svg"
 
+export default function Home() {
+  return (
+<>
+
+  </>
+);
 }

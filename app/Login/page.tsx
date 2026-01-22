@@ -4,9 +4,12 @@ import Link from "next/link"
 import { useState } from "react";
 
 export default function Login() {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState({
+        email: '',
+        password: ''
+    });
     const handleCLick = ()=>{
-        console.log("work", value);
+        console.log(value.email, value.password);
     }
     return (
     <main className= "flex flex-col items-center justify-center flex-1 w-full px-25 mt-15">
@@ -18,13 +21,13 @@ export default function Login() {
                 <p className="text-center text-2xl text-teal-500 font-extrabold mt-5"> Log In </p> 
                 <div className = "flex mt-10 ml-5 w-4/5 h-15 border-3 border-gray-500 items-center-safe">
                  <form className =""> 
-                    <input type="email" placeholder="Enter your email" className= "p-3 focus:outline-none" onChange={(e) => setValue(e.target.value)}></input>
+                    <input type="email" placeholder="Enter your email" className= "p-3 focus:outline-none" onChange={(e) => setValue({...value, email: e.target.value})}></input>
                  </form>
                 </div>
                  
                 <div className = "flex mt-10 ml-5 w-4/5 h-15 border-3 border-gray-500 items-center-safe">
                  <form className =""> 
-                    <input type="password" placeholder="Enter your password" className= "p-3 focus:outline-none" onChange={(e) => setValue(e.target.value)}></input>
+                    <input type="password" placeholder="Enter your password" className= "p-3 focus:outline-none" onChange={(e) => setValue({...value, password: e.target.value})}></input>
                  </form>
                 </div>               
 

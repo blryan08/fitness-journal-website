@@ -54,6 +54,12 @@ export default function RootLayout({
           <Link href={"/SignUp"}className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl"> Sign Up </Link>
       </div>
     </nav>
+
+    <footer>
+      <div>
+        
+      </div>
+    </footer>
        {children}
       </body>
     </html>

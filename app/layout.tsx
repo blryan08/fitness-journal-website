@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
   <html lang="en" className="{`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased`}">
   <body className="text-white bg-black-100 font-geist-sans font-geist-mono font-oswald" >
-    <nav className="flex items-center shadow-2xl">
+    <nav className="flex items-center border-b border-b-emerald-200 bg-blue border-shadow-md">
       <div className= "flex justify-start items-center gap-0" >
         <Image
           className= "scale-25"
@@ -49,7 +49,7 @@ export default function RootLayout({
         <h1 className= "text-xl font-oswald">YourFitJournal</h1>
       </div>
       <div className= "flex gap-6 ">
-          <Link href={"/"} className="flex justify-center items-center text-black h-10 w-20 bg-cyan-50 rounded-2xl ml-200"> Home </Link>
+          <Link href={"/"} className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl ml-200 hover:bg-gray-300"> Home </Link>
           <Link href={"/Login"} className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl"> Login </Link>
           <Link href={"/SignUp"}className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl"> Sign Up </Link>
       </div>

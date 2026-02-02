@@ -1,20 +1,12 @@
 @import "tailwindcss";
 
+@theme inline {
+    --font-sans:
+    var(--font-oswald), var(--font-geistMono), var(--font-geistSans)
+}
 
 body {
     background-color: black;
 }
-@layer utilities {
-    .font-geist-sans {
-        font-family: var(--font-geist-sans);
-    }
-    .font-geist-mono {
-        font-family: var(--font-geist-mono);
-    }
-    .font-oswald {
-        font-family: var(--font-oswald);
-    }
 
-   
-}
 

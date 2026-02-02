@@ -6,19 +6,19 @@ import Image from "next/image"
 import favicon2 from "../public/favicon2.svg"
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: '--font-geistSans',
   subsets: ["latin"],
   weight: "400"
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: '--font-geistMono',
   subsets: ["latin"],
   weight: "400"
 });
 
 const oswald = Oswald({
-  variable: "--font-oswald",
+  variable: '--font-oswald',
   subsets: ["latin"],
   weight: "400"
 });
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en" className="{`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased`}">
+  <html lang="en" className={`${oswald.variable} ${geistMono.variable} ${geistSans.variable}`}>
   <body className="text-white bg-black-100 font-geist-sans font-geist-mono font-oswald" >
     <nav className="flex items-center border-b border-b-emerald-200 bg-blue border-shadow-md">
       <div className= "flex justify-start items-center gap-0" >
@@ -46,7 +46,7 @@ export default function RootLayout({
           src={favicon2}
           alt = "YourFitJournallogo"
         />
-        <h1 className= "text-xl font-oswald">YourFitJournal</h1>
+        <h1 className= "text-xl">YourFitJournal</h1>
       </div>
       <div className= "flex gap-6 ">
           <Link href={"/"} className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl ml-200 hover:bg-gray-300"> Home </Link>
@@ -54,12 +54,6 @@ export default function RootLayout({
           <Link href={"/SignUp"}className="flex justify-center items-center text-black h-10 w-20 bg-gray-50 rounded-2xl"> Sign Up </Link>
       </div>
     </nav>
-
-    <footer>
-      <div>
-        
-      </div>
-    </footer>
        {children}
       </body>
     </html>

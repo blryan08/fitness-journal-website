@@ -2,17 +2,16 @@
 //import {Button} from "@/components/ui/Button"
 import Link from "next/link"
 import { useState } from "react";
+import { ClerkProvider, SignIn } from '@clerk/nextjs'
 
 export default function Login() {
-    const [value, setValue] = useState({
-        email: '',
-        password: ''
-    });
-    const handleCLick = ()=>{
-        console.log(value.email, value.password);
-    }
     return (
-    <main className= "flex flex-col items-center justify-center flex-1 w-full px-25 mt-15">
+        <ClerkProvider>
+        <div className="flex justify-center-safe mt-10">
+        <SignIn />
+        </div>
+        </ClerkProvider>
+    /*<main className= "flex flex-col items-center justify-center flex-1 w-full px-25 mt-15">
         <div className="mb-20">
             <h1 className="text-3xl"> Login To Your Account </h1>
         </div>
@@ -42,8 +41,7 @@ export default function Login() {
              </div>
 
         </div>
-
-    </main>
-    
+        </main>
+        */
     );
 }

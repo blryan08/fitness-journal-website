@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "./globals.css";
-import Link from "next/link"
-import Image from "next/image"
-import favicon2 from "../public/favicon2.svg"
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
+import Navmain from "./components/Nav"
+
 
 const geistSans = Geist({
   variable: '--font-geistSans',
@@ -32,23 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+<ClerkProvider>
       <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
-        <body className="text-white bg-black-100 font-geist-sans font-geist-mono font-oswald" >
-          <nav className="flex items-center border-b-4 border-b-emerald-200 bg-blue border-shadow-md">
-            <div className="flex justify-start items-center gap-0" >
-              <Image
-                className="scale-25"
-                src={favicon2}
-                alt="YourFitJournallogo"
-              />
-              <Link href={"/"}> <h1 className="text-xl">YourFitJournal</h1> </Link>
-            </div>
-            <div className="flex gap-6 justify-end-safe items-center ml-250">
-              <Link href={"/Login"}className="flex"> <SignInButton ></SignInButton> </Link>
-              <Link href={"/SignUp"} className="flex"> <SignUpButton></SignUpButton> </Link>
-            </div>
-          </nav>
+        <body className="text-white bg-white font-geist-sans font-geist-mono font-oswald" >
+          <Navmain />
           {children}
         </body>
       </html>

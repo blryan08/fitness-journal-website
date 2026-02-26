@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import Navmain from "./components/Nav"
+import {Navmain} from "./components/Nav"
+import {Separator} from "@/components/ui/separator";
 
 
 const geistSans = Geist({
@@ -33,8 +34,9 @@ export default function RootLayout({
   return (
 <ClerkProvider>
       <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
-        <body className="text-white bg-white font-geist-sans font-geist-mono font-oswald" >
+        <body className="text-white bg-black font-geist-sans font-geist-mono font-oswald" >
           <Navmain />
+          <Separator/>
           {children}
         </body>
       </html>

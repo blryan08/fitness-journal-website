@@ -7,11 +7,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/Navbar/navigation-menu"
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import Link from "next/link"
 import Image from "next/image";
-import favicon from "../../public/favicon.svg"
+import favicon from "../../../public/favicon.svg"
 import * as React from "react"
 
 const components: { title: string; href: string; description: string }[] = [

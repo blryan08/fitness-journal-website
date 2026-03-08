@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import {Navmain} from "./components/Nav"
+import {Navmain} from "../components/ui/Navbar/Nav"
 import {Separator} from "@/components/ui/separator";
 
 

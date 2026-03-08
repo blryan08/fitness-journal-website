@@ -66,7 +66,7 @@ export function Navmain() {
         <div className="flex ml-75 ">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-white bg-black "> Introduction</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-white bg-black font-oswald"> Introduction</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96">
               <ListItem href="/docs" title="Introduction">

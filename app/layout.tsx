@@ -6,6 +6,9 @@ import {Navmain} from "../components/ui/Navbar/Nav"
 import {Separator} from "@/components/ui/separator";
 
 
+const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
+
+
 const geistSans = Geist({
   variable: '--font-geistSans',
   subsets: ["latin"],
@@ -32,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<ClerkProvider>
+<ClerkProvider publishableKey={publishableKey}>
       <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
         <body className="text-white bg-black font-geist-sans font-geist-mono font-oswald" >
           <Navmain />

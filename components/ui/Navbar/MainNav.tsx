@@ -14,6 +14,7 @@ import Image from "next/image";
 import favicon from "../../../public/favicon.svg"
 import * as React from "react"
 
+
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Alert Dialog",
@@ -66,7 +67,7 @@ export function Navmain() {
         <div className="flex ml-75 ">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-white bg-black font-oswald"> Introduction</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-white bg-black text-lg"> Introduction</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96">
               <ListItem href="/docs" title="Introduction">
@@ -82,7 +83,7 @@ export function Navmain() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:flex">
-          <NavigationMenuTrigger className="text-white bg-black">Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-white bg-black text-lg">Components</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
               {components.map((component) => (
@@ -99,14 +100,14 @@ export function Navmain() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()} >
-            <Link href="/about" className="bg-black text-white"> About </Link>
+            <Link href="/about" className="bg-black text-white text-xl"> About </Link>
             </NavigationMenuLink> 
         </NavigationMenuItem>
       </NavigationMenuList>
       </div>
-      <div className="flex gap-6 justify-end-safe items-center ml-90">
-              <Link href={"/Login"} className="flex"> <SignInButton ></SignInButton> </Link>
-              <Link href={"/SignUp"} className="flex"> <SignUpButton></SignUpButton> </Link>
+      <div className="flex gap-6 justify-end-safe items-center ml-80">
+              <Link href={"/Login"} className="text-lg"> <SignInButton ></SignInButton> </Link>
+              <Link href={"/SignUp"} className="text-lg"> <SignUpButton></SignUpButton> </Link>
         </div>
 
     </NavigationMenu>

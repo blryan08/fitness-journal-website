@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import {Navmain} from "../components/ui/Navbar/Nav"
-import {Separator} from "@/components/ui/separator";
+import {Navmain} from "../components/ui/Navbar/MainNav"
+import { Separator } from "../components/ui/separator"
+
 
 
 const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
@@ -37,11 +38,18 @@ export default function RootLayout({
   return (
 <ClerkProvider publishableKey={publishableKey}>
       <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
-        <body className="text-white bg-black font-geist-sans font-geist-mono font-oswald" >
+        <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" >
           <Navmain />
-          <Separator/>
           {children}
+          <div className="mt-20">
+          <Separator/>
+          </div>
+          <footer className="mt-5 ml-5">
+          @ Built By Ryan 2026
+        </footer>
         </body>
+        
+        
       </html>
     </ClerkProvider>
   );

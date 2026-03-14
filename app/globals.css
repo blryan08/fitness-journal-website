@@ -5,9 +5,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-sans:
-    var(--font-oswald), var(--font-geistMono), var(--font-geistSans)
-;
     --color-sidebar-ring:
     var(--sidebar-ring);
     --color-sidebar-border:
@@ -90,6 +87,7 @@ body {
 }
 
 :root {
+    --font-oswald:'';
     --radius:
     0.625rem;
     --card:
@@ -224,5 +222,6 @@ body {
     @apply border-border outline-ring/50;
     @apply border-border outline-ring/50;}
   body {
+    font-family: var(--font-oswald);
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;}}

@@ -25,7 +25,7 @@ export default function Home() {
         <Image 
         src = {img1}
         alt = "image1"
-        className='scale-50 inline-block rounded-2xl'
+        className='scale-50 inline-block rounded-2xl positon:relative -z-10'
         />
         </div>
         </div>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
-import "./globals.css";
-import { ClerkProvider, UserButton, SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
-import {Navmain} from "../components/ui/Navbar/MainNav"
-import { Separator } from "../components/ui/separator"
+import "../../app/globals.css";
+import { ClerkProvider, UserButton, SignInButton, SignUpButton, Show } from '@clerk/nextjs';
+import {Navmain} from "../../components/ui/Navbar/MainNav"
+import { Separator } from "../../components/ui/separator"
+import {Footer} from "../../components/ui/footer"
 
 
 
@@ -36,21 +37,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<ClerkProvider publishableKey={publishableKey}>
-      <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
-        <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" >
-          <Navmain />
+    <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
+      <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" ><ClerkProvider publishableKey={publishableKey}>
+        <Navmain/>
           {children}
           <div className="mt-20">
           <Separator/>
           </div>
-          <footer className="mt-5 ml-5">
-          @ Built By Ryan 2026
-        </footer>
-        </body>
-        
-        
-      </html>
-    </ClerkProvider>
+          <div className="mt-10">
+          <Footer />
+          </div>
+        </ClerkProvider></body>
+      
+      
+    </html>
   );
 }

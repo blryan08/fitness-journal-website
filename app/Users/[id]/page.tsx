@@ -1,6 +1,6 @@
 import {Show} from "@clerk/nextjs"
 
-export function Users(){
+export default function Users(){
   return(
     <Show when={"signed-in"}>
       

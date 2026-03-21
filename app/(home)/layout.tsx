@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "../../app/globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, Show } from '@clerk/nextjs';
-import {Navmain} from "../../components/ui/Navbar/MainNav"
+import {Navmain} from "../../components//Navbar/MainNav"
 import { Separator } from "../../components/ui/separator"
 import {Footer} from "../../components/ui/footer"
 
 
 
-const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
+const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
 
 
 const geistSans = Geist({

@@ -3,7 +3,7 @@ import { Separator } from "../../components/ui/separator"
 import {Footer} from "../../components/ui/footer"
 import "../../app/globals.css";
 
-const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
+const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name
 
 export default function AuthLayout({
   children,

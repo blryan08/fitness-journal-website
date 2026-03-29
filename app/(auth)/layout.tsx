@@ -1,6 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Separator } from "../../components/ui/separator"
-import {Footer} from "../../components/ui/footer"
+import {Footer} from "../../components/footer/footer"
 import "../../app/globals.css";
 
 const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY; // Or the appropriate env var name

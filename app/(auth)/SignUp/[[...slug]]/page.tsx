@@ -1,5 +1,9 @@
 import {SignUp } from '@clerk/nextjs'
-export default function Signup() {
+import { auth } from '@clerk/nextjs/server'
+import { db } from '@/db'
+
+
+export default async function Signup() {
     return (
             <div className="flex my-10 space-x-50">
 

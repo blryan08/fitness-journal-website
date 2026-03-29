@@ -4,7 +4,7 @@ import "../../app/globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, Show } from '@clerk/nextjs';
 import {Navmain} from "../../components//Navbar/MainNav"
 import { Separator } from "../../components/ui/separator"
-import {Footer} from "../../components/ui/footer"
+import {Footer} from "../../components/footer/footer"
 
 
 

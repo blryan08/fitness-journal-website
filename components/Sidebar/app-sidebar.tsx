@@ -16,7 +16,6 @@ import {
 
 import { NavMain } from "@/components/Sidebar/nav-main"
 import { NavProjects } from "@/components/Sidebar/nav-projects"
-import { NavUser } from "@/components/Sidebar/nav-user"
 import { TeamSwitcher } from "@/components/Sidebar/team-switcher"
 import {
   Sidebar,
@@ -25,14 +24,15 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import dynamic from "next/dynamic"
+import { Suspense } from "react"
 
-// This is sample data.
+const NavUser = dynamic(
+  () => import("@/components/Sidebar/nav-user").then(mod => ({ default: mod.NavUser })),
+  { ssr: false }
+)
+
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   teams: [
     {
       name: "Acme Inc",
@@ -156,6 +156,7 @@ const data = {
   ],
 }
 
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -167,7 +168,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <Suspense fallback={null}>
+        <NavUser />
+        </Suspense>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

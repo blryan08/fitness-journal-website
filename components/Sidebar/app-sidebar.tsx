@@ -3,19 +3,19 @@
 import * as React from "react"
 import {
   AudioWaveform,
-  BookOpen,
-  Bot,
+  CalendarDays,
   Command,
   Frame,
   GalleryVerticalEnd,
   Map,
+  Notebook,
   PieChart,
   Settings2,
-  SquareTerminal,
+  ChartColumnBig,
 } from "lucide-react"
 
 import { NavMain } from "@/components/Sidebar/nav-main"
-import { NavProjects } from "@/components/Sidebar/nav-projects"
+import { NavCommunity } from "@/components/Sidebar/nav-projects"
 import { TeamSwitcher } from "@/components/Sidebar/team-switcher"
 import {
   Sidebar,
@@ -52,9 +52,9 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Journal",
       url: "#",
-      icon: SquareTerminal,
+      icon: Notebook,
       isActive: true,
       items: [
         {
@@ -72,9 +72,9 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Analytics",
       url: "#",
-      icon: Bot,
+      icon: ChartColumnBig,
       items: [
         {
           title: "Genesis",
@@ -91,9 +91,9 @@ const data = {
       ],
     },
     {
-      title: "Documentation",
+      title: "Schedule",
       url: "#",
-      icon: BookOpen,
+      icon: CalendarDays,
       items: [
         {
           title: "Introduction",
@@ -137,7 +137,7 @@ const data = {
       ],
     },
   ],
-  projects: [
+  Community: [
     {
       name: "Design Engineering",
       url: "#",
@@ -165,7 +165,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavCommunity Community={data.Community} />
       </SidebarContent>
       <SidebarFooter>
         <Suspense fallback={null}>

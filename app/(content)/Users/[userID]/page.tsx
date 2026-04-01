@@ -14,14 +14,14 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import {Show} from "@clerk/nextjs"
+import { currentUser } from "@clerk/nextjs/server"
 
-export default async function Users({ params, }: { params: Promise<{userID: string}>;
- }) {
-  const userID = (await params).userID;
+export default async function Users() {
+const user = await currentUser()
+const userName = (user) ? user?.firstName || user?.lastName || "guest" : "'"
   return (
     <Show when = "signed-in">
           
-
     <SidebarProvider>
       <AppSidebar/>
       <SidebarInset>
@@ -36,18 +36,20 @@ export default async function Users({ params, }: { params: Promise<{userID: stri
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
-                    Build Your Application
+                    Welcome Back
                   </BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  <BreadcrumbPage>{userName}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+          <div className="flex ">
+            <h1 className="text-3xl text-black"> Welcome Back, {userName} !</h1>
+          </div>
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />

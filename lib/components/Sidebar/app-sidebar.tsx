@@ -14,21 +14,21 @@ import {
   ChartColumnBig,
 } from "lucide-react"
 
-import { NavMain } from "@/components/Sidebar/nav-main"
-import { NavCommunity } from "@/components/Sidebar/nav-projects"
-import { TeamSwitcher } from "@/components/Sidebar/team-switcher"
+import { NavMain } from "@/lib/components/Sidebar/nav-main"
+import { NavCommunity } from "@/lib/components/Sidebar/nav-projects"
+import { TeamSwitcher } from "@/lib/components/Sidebar/team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "@/lib/components/ui/sidebar"
 import dynamic from "next/dynamic"
 import { Suspense } from "react"
 
 const NavUser = dynamic(
-  () => import("@/components/Sidebar/nav-user").then(mod => ({ default: mod.NavUser })),
+  () => import("@/lib/components/Sidebar/nav-user").then(mod => ({ default: mod.NavUser })),
   { ssr: false }
 )
 

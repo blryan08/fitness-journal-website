@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/Sidebar/app-sidebar"
+import { AppSidebar } from "@/lib/components/Sidebar/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
+} from "@/lib/components/ui/breadcrumb"
+import { Separator } from "@/lib/components/ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "@/lib/components/ui/sidebar"
 import {Show} from "@clerk/nextjs"
 import { currentUser } from "@clerk/nextjs/server"
 

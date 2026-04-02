@@ -1,6 +1,6 @@
 import {SignUp } from '@clerk/nextjs'
 import { auth } from '@clerk/nextjs/server'
-import { db } from '@/db'
+import { db } from '@/lib/db'
 
 
 export default async function Signup() {

@@ -8,6 +8,13 @@
       "when": 1772115157058,
       "tag": "0000_closed_jack_murdock",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1775093270884,
+      "tag": "0001_young_silver_centurion",
+      "breakpoints": true
     }
   ]
 }

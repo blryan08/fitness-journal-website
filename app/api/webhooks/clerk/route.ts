@@ -39,10 +39,6 @@ export async function POST(req: NextRequest) {
     if (eventType === "user.created" || eventType === "user.updated") {
       const { id, email_addresses, first_name, last_name, image_url } = evt.data;
       const email = email_addresses[0].email_address ?? null;
-  
-      if (!email) {
-        return new Response('No email, skipping', { status: 200 });
-      }
 
       await db.insert(users)
         .values({

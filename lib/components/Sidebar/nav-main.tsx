@@ -17,6 +17,7 @@ import {
   SidebarMenuSubItem,
 } from "@/lib/components/ui/sidebar"
 import { Button } from "../ui/button"
+import Link from "next/link"
 
 export function NavMain({
   items,
@@ -34,7 +35,9 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup>
-      <Button className="bg-white text-black hover:bg-teal-100 font-bold"> Add An Entree</Button>
+<Link href="/Users/[userID]/Journal" as={"/Users/${userID]/Journal"}>
+      <Button className="bg-white text-black hover:bg-teal-100 font-bold "> Add An Entree</Button>
+      </Link>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible

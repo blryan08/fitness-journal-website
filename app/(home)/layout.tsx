@@ -37,8 +37,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider publishableKey={publishableKey}>
     <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
-      <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" ><ClerkProvider publishableKey={publishableKey}>
+      <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" >
         <Navmain/>
           {children}
           <div className="mt-20">
@@ -47,9 +48,10 @@ export default function RootLayout({
           <div className="mt-10">
           <Footer />
           </div>
-        </ClerkProvider></body>
+          </body>
       
       
     </html>
+    </ClerkProvider>
   );
 }

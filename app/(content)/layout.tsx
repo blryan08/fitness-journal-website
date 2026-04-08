@@ -6,7 +6,7 @@ export default function UserLayout({ children }: { children: React.ReactNode }) 
   return  (<ClerkProvider publishableKey={publishableKey}>
     <html lang="en">
 
-  <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" >
+  <body className="text-white bg-white {oswald.className}" >
 {children}
 
 </body>

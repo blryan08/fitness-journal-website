@@ -1,9 +1,9 @@
 "use client"
+import { SimpleEditor } from "@/lib/tiptap-components/tiptap-templates/simple/simple-editor"
 
 export default function Journal(){
     return(
-        <h1> Journal</h1>
-        
+        <SimpleEditor />
     )
     
 }

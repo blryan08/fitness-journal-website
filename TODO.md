@@ -1,14 +1,19 @@
 Signed In content: 
 + Home page
-+ Make sure it is protected
-+ Dashboard (ShadCN)
+
 + Journal Entree 
 + Profile Setting
 
 
+Dashboard ShadCN:
++ remove top user avatar?
+
+
 Fix fonts warning
 
-Edit NeonDB:
-+ Store UserID, Date?
+Tip-tap Editor:
++ Change UI components
++ Find ways to save session and displays in on dashboard
+
 
 

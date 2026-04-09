@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/lib/components/Sidebar/app-sidebar"
+import { AppSidebar } from "@/components/shadcn//Sidebar/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/lib/components/ui/breadcrumb"
-import { Separator } from "@/lib/components/ui/separator"
+} from "@/components/shadcn/ui/breadcrumb"
+import { Separator } from "@/components/shadcn/ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/lib/components/ui/sidebar"
+} from "@/components/shadcn/ui/sidebar"
 import {Show} from "@clerk/nextjs"
 import { currentUser } from "@clerk/nextjs/server"
 

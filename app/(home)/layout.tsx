@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
 import "../../app/globals.css";
 import { ClerkProvider, UserButton, SignInButton, SignUpButton, Show } from '@clerk/nextjs';
-import {Navmain} from "@/lib/components//Navbar/MainNav"
-import { Separator } from "@/lib/components/ui/separator"
-import {Footer} from "@/lib/components/footer/footer"
+import {Navmain} from "@/components/shadcn//Navbar/MainNav"
+import { Separator } from "@/components/shadcn/ui/separator"
+import {Footer} from "@/components/shadcn/footer/footer"
 
 
 

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import img1 from "@/public/img1.jpg"
 import img2 from "@/public/img2.jpg"
-import {Button, buttonVariants} from "@/lib/components/ui/button"
+import {Button, buttonVariants} from "@/components/shadcn/ui/button"
 import Link from "next/link"
 
 

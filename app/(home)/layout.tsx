@@ -40,7 +40,12 @@ export default function RootLayout({
     <ClerkProvider publishableKey={publishableKey}>
     <html lang="en" className={`${oswald.variable} ${geistSans.variable}`}>
       <body className="text-white bg-linear-to-br from-black to-gray-800 {oswald.className}" >
+        <Show when="signed-in">
         <Navmain/>
+        </Show>
+        <Show when="signed-out">
+        <Navmain/>
+        </Show>
           {children}
           <div className="mt-20">
           <Separator/>

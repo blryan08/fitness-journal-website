@@ -5,7 +5,7 @@ import type { NodeViewProps } from "@tiptap/react"
 import { NodeViewWrapper } from "@tiptap/react"
 import { Button } from "@/components/tiptap-components/tiptap-ui-primitive/button"
 import { CloseIcon } from "@/components/tiptap-components/tiptap-icons/close-icon"
-import "@/components/tiptap-node/image-upload-node/image-upload-node.scss"
+import "@/components/tiptap-components/tiptap-node/image-upload-node/image-upload-node.scss"
 import { focusNextNode, isValidPosition } from "@/lib/tiptap-utils"
 
 export interface FileItem {

@@ -65,7 +65,7 @@ export function Footer() {
 					<a
 						aria-label="x/twitter"
 						className="inline-flex items-center gap-1 text-white hover:underline"
-						href={"https://x.com/shabanhr"}
+						href={"https://github.com/blryan08"}
 						rel="noreferrer"
 						target="_blank"
 					>

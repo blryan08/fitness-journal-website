@@ -1,5 +1,5 @@
 
-import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { pgSchema,pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 
 export const users = pgTable("users", {
@@ -11,3 +11,11 @@ export const users = pgTable("users", {
   createdAt: timestamp("created_at").defaultNow(),
 
 });
+
+export const userSetup = pgTable("user",{
+  id: text("id").primaryKey(), // Clerk ID
+  whyMessaage: text("why_message"),
+  currentStatus: text("current_status"),
+  goals: text("goals"),
+  createdAt: timestamp("created_at").defaultNow(),
+})
